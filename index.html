@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cloud-Coffee | Módulo de Promociones</title>
+<style>
+  :root {
+    --brown: #4b2e1e;
+    --cream: #fdf6ec;
+    --accent: #c68b3d;
+  }
+  body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: var(--cream);
+    color: var(--brown);
+    margin: 0;
+    padding: 0;
+  }
+  header {
+    background: var(--brown);
+    color: var(--cream);
+    padding: 24px;
+    text-align: center;
+  }
+  header h1 { margin: 0; font-size: 28px; }
+  header p { margin: 4px 0 0; opacity: .85; }
+  main {
+    max-width: 640px;
+    margin: 32px auto;
+    background: #fff;
+    border-radius: 12px;
+    padding: 24px 28px;
+    box-shadow: 0 4px 14px rgba(0,0,0,.08);
+  }
+  h2 { color: var(--accent); border-bottom: 2px solid var(--accent); padding-bottom: 6px; }
+  label { display: block; margin-top: 14px; font-weight: 600; }
+  select, input {
+    width: 100%;
+    padding: 8px 10px;
+    margin-top: 6px;
+    border: 1px solid #d8c6ae;
+    border-radius: 6px;
+    font-size: 15px;
+    box-sizing: border-box;
+  }
+  button {
+    margin-top: 18px;
+    background: var(--accent);
+    color: #fff;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 6px;
+    font-size: 15px;
+    cursor: pointer;
+  }
+  button:hover { background: #a86f2c; }
+  #resultado {
+    margin-top: 18px;
+    padding: 14px;
+    border-radius: 8px;
+    background: #f6ecd9;
+    font-size: 16px;
+    display: none;
+  }
+  footer {
+    text-align: center;
+    padding: 16px;
+    font-size: 13px;
+    color: #8a7666;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>☕ Cloud-Coffee</h1>
+  <p>Módulo de descuentos y promociones para comandas digitales</p>
+</header>
+
+<main>
+  <h2>Calculadora de promociones</h2>
+  <p>Selecciona el tipo de promoción aplicable a la comanda y calcula el total con descuento.</p>
+
+  <label for="precio">Precio de la comanda (MXN)</label>
+  <input type="number" id="precio" min="0" step="0.5" placeholder="Ej. 85.00">
+
+  <label for="promo">Tipo de promoción</label>
+  <select id="promo">
+    <option value="0">Sin promoción</option>
+    <option value="0.10">Estudiante (10%)</option>
+    <option value="0.15">Cumpleaños (15%)</option>
+  </select>
+
+  <button onclick="calcularDescuento()">Calcular</button>
+
+  <div id="resultado"></div>
+</main>
+
+<footer>Cloud-Coffee &copy; 2026 — Digitalización del módulo de descuentos</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

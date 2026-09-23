@@ -1,0 +1,9 @@
+{
+  "name": "cloud-coffee-api",
+  "version": "1.0.0",
+  "description": "Digitalizacion del modulo de descuentos para Cloud-Coffee",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Sin pruebas automatizadas configuradas todavia\" && exit 0"
+  }
+}

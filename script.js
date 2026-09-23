@@ -13,6 +13,10 @@ function calcularDescuento() {
     resultado.style.display = "block";
     resultado.textContent = "Ingresa un precio válido antes de calcular.";
     return;
+  }  if (precio > 500) {
+    resultado.style.display = "block";
+    resultado.textContent = "Verifica el monto: parece muy alto para una comanda individual.";
+    return;
   }
 
   const descuento = precio * porcentaje;
